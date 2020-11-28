@@ -93,8 +93,19 @@ config :mdns_lite,
     }
   ]
 
+
+## Nerves LEDs controls LEDs, which is neat
+config :nerves_leds,
+  names: [green: "led0"]
+
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
 
 # import_config "#{Mix.target()}.exs"
+
+
+# Import a config that is not included in the git repository.
+# Put your audio file config in there.
+
+import_config "secret.exs"

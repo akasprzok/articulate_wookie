@@ -1,7 +1,7 @@
-defmodule HelloNerves.MixProject do
+defmodule ArticulateWookie.MixProject do
   use Mix.Project
 
-  @app :hello_nerves
+  @app :articulate_wookie
   @version "0.1.0"
   @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :bbb, :osd32mp1, :x86_64]
 
@@ -22,7 +22,7 @@ defmodule HelloNerves.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {HelloNerves.Application, []},
+      mod: {ArticulateWookie.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -39,6 +39,8 @@ defmodule HelloNerves.MixProject do
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
       {:nerves_pack, "~> 0.4.0", targets: @all_targets},
+      {:nerves_leds, "~> 0.8", targets: @all_targets},
+      {:circuits_gpio, "~> 0.4", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.13", runtime: false, targets: :rpi},

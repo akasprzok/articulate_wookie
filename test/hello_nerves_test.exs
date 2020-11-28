@@ -1,8 +1,8 @@
-defmodule HelloNervesTest do
+defmodule ArticulateWookieTest do
   use ExUnit.Case
-  doctest HelloNerves
+  doctest ArticulateWookie
 
   test "greets the world" do
-    assert HelloNerves.hello() == :world
+    assert ArticulateWookie.hello() == :world
   end
 end

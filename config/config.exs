@@ -8,7 +8,7 @@ import Config
 # Enable the Nerves integration with Mix
 Application.start(:nerves_bootstrap)
 
-config :hello_nerves, target: Mix.target()
+config :articulate_wookie, target: Mix.target()
 
 # Customize non-Elixir parts of the firmware. See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
