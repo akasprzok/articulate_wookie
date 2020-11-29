@@ -5,7 +5,7 @@ defmodule ArticulateWookie.Application do
 
   use Application
 
-  alias ArticulateWookie.AudioPlayer
+  alias ArticulateWookie.{AudioPlayer, Input}
 
   def start(_type, _args) do
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -36,7 +36,8 @@ defmodule ArticulateWookie.Application do
       # Children for all targets except host
       # Starts a worker by calling: ArticulateWookie.Worker.start_link(arg)
       # {ArticulateWookie.Worker, arg},
-      AudioPlayer
+      AudioPlayer,
+      Input
     ]
   end
 
